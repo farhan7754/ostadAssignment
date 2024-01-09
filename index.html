@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeking Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('https://png.pngtree.com/background/20210716/original/pngtree-white-abstract-vector-web-background-design-picture-image_1354906.jpg');
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://cdn.vectorstock.com/i/preview-1x/86/74/we-are-hiring-job-vacancy-banner-vector-39398674.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            width: 300px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #150316;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .age-card {
+            width: 300px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Job Seeking Page</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Find Jobs</a>
+        <a href="#">Post Resume</a>
+        <a href="#">Career Advice</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="banner">
+        <h2 style="color: magenta;">Find Your Dream Job</h2>
+    </div>
+
+    <div class="card-container">
+        <!-- Job Cards -->
+        <div class="card">
+            <img src="https://factohr.com/wp-content/themes/factohr-theme/images/job-description/sales-manager-jd/sales-manager-jd.png" height="200px" width="300px" alt="Job 1">
+            <h3>Sales and Management</h3>
+            <p>Join our dynamic sales team and be the driving force behind our company's success! As a Sales Representative, you'll be responsible for identifying new business opportunities, building relationships with clients, and achieving sales targets. If you're a highly motivated and results-driven individual with excellent communication skills, we want you on board. Experience in sales and a passion for exceeding customer expectations are essential. Take the next step in your career and contribute to our growth by applying today!</p>
+        </div>
+
+        <div class="card">
+            <img src="https://www.austintec.com/wp-content/uploads/2022/12/most-in-demand-engineering-jobs-2023.jpg" height="200px" width="300px" alt="Job 2">
+            <h3>Engineering</h3>
+            <p>Are you a creative problem solver with a passion for innovation? Join our team as a Mechanical Engineer and contribute to cutting-edge projects that shape the future. As a key member of our engineering team, you'll be involved in designing, testing, and optimizing mechanical systems. We're looking for someone with a strong background in mechanical engineering, proficiency in CAD software, and a knack for collaborating effectively with cross-functional teams. If you're ready to tackle exciting challenges and bring groundbreaking ideas to life, apply now and be a part of our journey towards engineering excellence!</p>
+        </div>
+
+        <div class="card">
+            <img src="https://i.pinimg.com/originals/b9/27/1b/b9271b8356c0e07fac2126e25dfe4343.jpg" height="200px" width="300px" alt="Job 3">
+            <h3>Doctor for Medical and health care</h3>
+            <p>We are seeking a compassionate and dedicated Registered Nurse to join our healthcare team. As a vital member of our nursing staff, you will provide patient care, administer medications, and collaborate with multidisciplinary teams to ensure the highest standard of healthcare delivery. Candidates should possess a valid nursing license, strong clinical skills, and a commitment to patient well-being. If you are a caring professional who thrives in a fast-paced medical environment, we invite you to apply and make a meaningful impact on the lives of those we serve. Join us in delivering quality healthcare with empathy and expertise.</p>
+        </div>
+    </div>
+
+    <!-- Age input field and card based on age -->
+    <div class="card-container">
+        <input type="number" id="ageInput" placeholder="Enter your age">
+        <div id="ageCard" class="age-card"></div>
+    </div>
+
+    <footer>
+        <div>
+            <p>About | <a href="#">News</a> | <a href="#">Teams</a> | <a href="#">Contact</a> |</p>
+            <p><a href="#">Terms of Use</a> | <a href="#">Policies</a> | <a href="#">Legal</a> | <a href="#">E-commerce Platforms</a></p>
+        </div>
+        <div>
+            <p>&copy; 2024 JobSeeker.com. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for age validation
+        document.getElementById('ageInput').addEventListener('change', function () {
+            var age = parseInt(this.value);
+            var ageCard = document.getElementById('ageCard');
+            if (age >= 18) {
+                ageCard.innerHTML = '<h3>You are an adult</h3>';
+            } else {
+                ageCard.innerHTML = '<h3>You are a child</h3>';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
